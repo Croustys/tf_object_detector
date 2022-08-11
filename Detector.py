@@ -77,7 +77,7 @@ class Detector:
     cv2.destroyAllWindows()
   
   def predict_video(self, video_path, threshold = 0.5):
-    cap = cv2.VideoCapture(video_path)
+    cap = cv2.VideoCapture(1, cv2.CAP_DSHOW)
 
     if cap.isOpened() == False:
       print("Error opening video...")
